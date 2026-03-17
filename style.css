@@ -1,0 +1,84 @@
+
+body{
+margin:0;
+}
+
+.title{
+color:rgb(255, 255, 255);
+text-align: bottom;
+border: 2px solid #1275d8;
+margin-top: 10px;
+margin-left: 45px;
+border-radius: 5px;
+padding-top: 5px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+padding-bottom: 1px;
+padding-left: 5px;
+padding-right: 5px;
+
+}
+
+header{
+position:fixed;
+top:0;
+margin-top: 5px;
+width:100%;
+z-index:1000;
+}
+
+section{
+    height:100vh;
+    padding:40px;
+}
+
+.nav{
+    border: 2px solid #1275d8;
+    border-radius: 30px;
+    padding: 5px 15px;
+}
+
+.nav-item a{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: 'Trebuchet MS','Lucida Sans Unicode','Lucida Grande','Lucida Sans',Arial,sans-serif;
+}
+
+.nav-item a:hover{
+    color:#1275d8;
+}
+
+.nav-tabs .nav-link{
+    border: none;
+    background: transparent;
+}
+
+.nav-tabs{
+    border-bottom: none;
+}
+
+#home{
+    background-color: #0e0d0d;
+    background: radial-gradient(
+        circle, #85a8ff, #0a0b5c
+    );
+    text-align: center;
+    padding-top: 300px;
+}
+
+#about{
+    background-color: #6c757d;
+}
+
+#projects{
+    background-color: #28a745;
+}
+
+#contact{
+    background-color: #dc3545;
+}
+
+.h1{
+    color: rgb(255, 255, 255);
+    align-items: center;
+    font-family: 'Trebuchet MS','Lucida Sans Unicode','Lucida Grande','Lucida Sans',Arial,sans-serif;
+}
