@@ -160,7 +160,56 @@ section {
     color: #0dcaf098;
 }
 
+.mobile-divider {
+    display: block;
+    width: 4px; 
+    height: 50px; 
+    background-color: #0dcaf098; 
+    border: none; 
+    opacity: 1; 
+    box-shadow: 0 0 10px #0dcaf098; 
+    border-radius: 10px; 
+    margin: 0;
+}
+
 @media (max-width: 900px) {
+    .title {
+        padding-left: 20px !important; 
+        padding-right: 20px !important;
+        
+        margin-left: 0 !important; 
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .btn-hire {
+        background-color: transparent !important;
+        background: none !important; 
+        color: #0dcaf0 !important; 
+        border: 2px solid #0dcaf0 !important;
+    }
+
+    .btn-tech {
+        background-color: transparent !important;
+        background: none !important;
+        color: #ffffff !important; 
+        border: 2px solid #ffffff !important;
+    }
+    
+    .btn-outline-info {
+        background-color: transparent !important;
+    }
+
+    .mobile-divider {
+        width: 80% !important;
+        height: 2px !important;
+        background-color: #0dcaf098 !important;
+        border: none !important;
+        margin: 10px auto !important;
+        display: block !important;
+    }
+
     .sidebar {
         max-width: 500px; 
         border: none ;
@@ -189,6 +238,7 @@ section {
     .hide-on-mobile {
         display: none;
     }
+
 
     .menu-button {
         display: block;
