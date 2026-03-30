@@ -1,78 +1,727 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <title>My Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <title>My Portfolio</title>
 </head>
+
 <body>
+  <header class="fixed-top" style="background-color:rgba(0, 0, 0, 0);">
+    <div class="d-flex align-items-center position-relative">
+      <h3 class="title text-white">
+        I'M A
+        <span class="animated-text" style="color: #0dcaf0; ">
+          <span>&nbspCODER</span>
+          <span>&nbspDEVELOPER</span>
+          <span>&nbspPROGRAMMER</span>
+          <span>&nbspDESIGNER</span>
+        </span>
+      </h3>
 
-     <header class="fixed-top" style="background-color:rgba(0, 0, 0, 0);">
-  <div class="d-flex align-items-center position-relative">
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+              viewBox="0 -960 960 960" width="26px" fill="#e3e3e3">
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg></a></li>
+        <li class="nav-item">
+          <a href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a href="#projects">Tech Stack</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="#Upskill">Upskill</a>
+        </li>
+        <li class="nav-item">
+          <a href="#HireMe">Hire Me</a>
+        </li>
+      </ul>
+      <ul class="nav position-absolute start-50 translate-middle-x">
+        <li class="nav-item hide-on-mobile">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item hide-on-mobile">
+          <a class="nav-link" href="#about">Profile</a>
+        </li>
+        <li class="nav-item hide-on-mobile">
+          <a class="nav-link" href="#projects">Tech Stack</a>
+        </li>
+        <li class="nav-item hide-on-mobile">
+          <a class="nav-link" href="#contact">Projects</a>
+        </li>
+        <li class="nav-item hide-on-mobile">
+          <a class="nav-link" href="#Upskill">Upskill</a>
+        </li>
+        <li class="nav-item hide-on-mobile">
+          <a class="nav-link" href="#HireMe">Hire Me</a>
+        </li>
+      </ul>
+      <div class="ms-auto pe-3">
+        <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+              height="30px" viewBox="0 -960 960 960" width="30px" fill="#e3e3e3">
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg></a></li>
+      </div>
+    </div>
+  </header>
+  <section id="home"
+    class="unified-background d-flex flex-column align-items-center justify-content-center text-center position-relative"
+    style="min-height: 100vh; padding-bottom: 100px;">
 
-    <h3 class="title text-white">Angelo Marcelino</h3>
-    <ul class="nav position-absolute start-50 translate-middle-x">
-      <li class="nav-item">
-        <a class="nav-link" href="#home">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#about">Profile</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#projects">Tech Stack</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#contact">Projects</a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link" href="#HireMe">Hire Me</a>
-      </li>
-    </ul>
-
-  </div>
-</header>
-
-      <section id="home">
-        <div class="relative z10 text-center px-4 max-w4xl mx-auto">
-            <h1 class="text-6xl ml:text-8xl mb-4 text-white font-bold tracking-tight">
-              <div style="text-shadow: rgba(15, 15, 15, 0.5) 0px 20px; opacity: 1;">
-              <span style="opacity: 1; display: inline;">A</span>
-              <span style="opacity: 1; display: inline;">N</span>
-              <span style="opacity: 1; display: inline;">G</span> 
-              <span style="opacity: 1; display: inline;">E</span>
-              <span style="opacity: 1; display: inline;">L</span>
-              <span style="opacity: 1; display: inline;">O</span>
-               <span style="opacity: 1; display: inline;">M</span>
-              <span style="opacity: 1; display: inline;">A</span>
-              <span style="opacity: 1; display: inline;">R</span>
-              <span style="opacity: 1; display: inline;">C</span>
-              <span style="opacity: 1; display: inline;">E</span>
-              <span style="opacity: 1; display: inline;">L</span>
-              <span style="opacity: 1; display: inline;">I</span>
-              <span style="opacity: 1; display: inline;">N</span>
-              <span style="opacity: 1; display: inline;">O</span>
-              </div>
-            </h1>
+    <div class="relative z10 text-center px-4 max-w4xl mx-auto">
+      <h1 class="mb-4 text-white font-bold tracking-tight">
+        <div style="text-shadow: rgba(15, 15, 15, 0.5) 0px 13px; opacity: 1;">
+          <span>A</span><span>N</span><span>G</span><span>E</span><span>L</span><span>O</span>
+          <span>M</span><span>A</span><span>R</span><span>C</span><span>E</span><span>L</span><span>I</span><span>N</span><span>O</span>
         </div>
-      </section>
+      </h1>
+    </div>
 
-      <section id="about">
-      <h1>About</h1>
-      </section>
+    <div class="mb-4 text-white">
+      <h4>FRONTEND DEVELOPER</h4>
+    </div>
 
-      <section id="projects">
-      <h1>Projects</h1>
-      </section>
+    <div class="mb-4 text-white">
+      <p>I’m a frontend developer focused on building responsive, user-friendly web interfaces.<br>
+        I turn designs into functional, high-performing websites.</p>
+    </div>
+    
+   <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 gap-md-4 mt-4">
+  
+  <a href="#HireMe" class="btn btn-info btn-lg btn-glow px-4" 
+     style="border-radius: 20px; min-width: 200px;">
+    Hire Me
+  </a>
 
-      <section id="contact">
-      <h1>Contact</h1>
-      </section>
+  <div class="d-md-none" style="width: 50px; height: 4px; background-color: #0dcaf098; box-shadow: 0 0 10px #0dcaf098; border-radius: 10px;"></div>
+  
+  <a href="#contact" class="btn btn-outline-info btn-lg btn-glow px-4" 
+     style="border-radius: 20px; min-width: 200px;">
+    View Projects
+  </a>
 
-      <section id="HireMe">
-      <h1>Hire Me</h1>
-      </section>
+  <div class="d-md-none" style="width: 50px; height: 4px; background-color: #0dcaf098; box-shadow: 0 0 10px #0dcaf098; border-radius: 10px;"></div>
+
+  <a href="#projects" class="btn btn-light btn-lg btn-glow px-4" 
+     style="border-radius: 20px; min-width: 200px;">
+    Tech Stack
+  </a>
+
+</div>
+
+    <div class="position-absolute" style="bottom: 120px; left: 50%; transform: translateX(-50%); z-index: 20;">
+      <img class="arrowDown" src="Drawer/down-arrow.png" alt="Arrow Down" width="30">
+    </div>
+  </section>
+
+  <footer class="w-100 py-4"
+    style="background-color: #0a0b5cf3; border-top: 2px solid #0dcaf098; border-bottom: 2px solid #0dcaf098;">
+    <div class="container text-center">
+      <div class="mb-2">
+        <h3 class="text-white fw-bold mb-0" style="text-shadow: 0 0 10px #0dcaf098; letter-spacing: 2px;">
+
+        </h3>
+        <p class="text-info small mb-0"></p>
+      </div>
+
+      <hr class="mx-auto my-3" style="width: 50px; 
+           height: 4px; 
+           background-color: #0dcaf098; 
+           border: none; 
+           opacity: 1; 
+           box-shadow: 0 0 10px #0dcaf098; 
+           border-radius: 10px;">
+
+      <div class="text-white-50 small">
+
+      </div>
+    </div>
+  </footer>
+
+  <section id="about" class="aboutme unified-background">
+  <div class="wrapper reveal">
+    <img onclick="changeImage()" src="Drawer/angelo.jpg" alt="Profile" id="profileImage" class="profile reveal-scroll">
+    
+    <div class="intro reveal-scroll" style="animation-delay: 0.1s;">
+      <h2 class="title">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+          style="margin-right: 10px; margin-bottom: 8px; border-radius: 100%;" fill="#FFFFFF">
+          <path d="M385.67-485.73q-39-39.07-39-94.34 0-55.26 39.06-94.26 39.07-39 94.34-39 55.26 0 94.26 39.06 39 39.07 39 94.34 0 55.26-39.06 94.26-39.07 39-94.34 39-55.26 0-94.26-39.06Zm141.5-47.02q19.5-19.43 19.5-47.17 0-27.75-19.42-47.25-19.43-19.5-47.17-19.5-27.75 0-47.25 19.42-19.5 19.43-19.5 47.17 0 27.75 19.42 47.25 19.43 19.5 47.17 19.5 27.75 0 47.25-19.42ZM480-60 120-280v-400l360-220 360 220v400L480-60Zm0-78.33L640.33-236q-34.66-25.33-75.83-38-41.17-12.67-84.5-12.67T395.5-274q-41.17 12.67-75.83 38L480-138.33ZM256-275q48.67-36.67 105.67-57.5T480-353.33q61.33 0 118.33 20.83T704-275l69.33-41v-326.49L480-822 186.67-642.49V-316L256-275Zm224-205.67Z" />
+        </svg>About Me
+      </h2>
+      
+      <h5 class="card-title text-white" style="margin-left: 20px; text-shadow: black 2px 7px 5px;">Frontend Developer</h5>
+      <div style="margin-left: 20px; margin-bottom: 15px; margin-top: 15px;">
+    <button onclick="sayHello()" class="btn btn-outline-info btn-sm" style="border-radius: 20px; padding: 5px 15px; font-size: 0.8rem;">
+        Change Greeting
+    </button>
+</div>
+
+<p class="card-text text-white" style="margin-left: 20px; line-height: 1.6;">
+    <span id="helloDisplay" style="font-weight: bold; color: #0dcaf0; text-shadow: 0 0 8px rgba(13, 202, 240, 0.6); transition: opacity 0.3s ease;">Hi!</span> ,I’m Angelo, a frontend developer passionate about building beautiful and interactive web experiences. 
+    I specialize in modern frameworks, responsive design, and creating digital solutions that bring ideas to life.
+</p>
+
+      <div class="logo">
+        <a class="icon-link icon-link-hover link-success link-underline-success link-underline-opacity-25 text-white" href="https://www.linkedin.com/in/angelo-marcelino-9301313ba" target="_blank"> Linkedin <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" /></svg></a>
+        <img style="border-radius: 90%; animation: spin-infinite 4s linear infinite;" src="Drawer/linkedin.png" alt="linkedin">
+
+        <a class="icon-link icon-link-hover link-success link-underline-success link-underline-opacity-25 text-white" href="https://github.com/Sherlock2-4" target="_blank"> Github <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" /></svg></a>
+        <img style="border-radius: 90%; animation: spin-infinite 4s linear infinite;" src="Drawer/github.png" alt="github">
+
+        <a class="icon-link icon-link-hover link-success link-underline-success link-underline-opacity-25 text-white" href="https://www.facebook.com/marcelinoangelo824" target="_blank"> Facebook <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" /></svg></a>
+        <img style="border-radius: 90%; animation: spin-infinite 4s linear infinite;" src="Drawer/facebook.png" alt="facebook">
+      </div>
+
+      <div class="cards text-white reveal-scroll" style="animation-delay: 0.2s;">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front text-white">
+              <h3>Project</h3>
+              <p class="big-number"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#FFFFFF" style="margin-bottom: 10px; margin-right: 5px"><path d="M140-220v-520 550-30Zm0 60q-24 0-42-18.5T80-220v-520q0-23 18-41.5t42-18.5h281l60 60h339q23 0 41.5 18.5T880-680v301h-60v-301H456l-60-60H140v520h295v60H140Zm485 99L495-190l130-129 42 42-87 87 87 87-42 42Zm164 0-42-42 87-87-87-87 42-42 130 129L789-61Z" /></svg>3</p>
+            </div>
+            <div class="flip-card-back">
+              <h5>Project Details</h5>
+              <p>• CineMax<br>• DXTreme<br>• MealOrdering</p>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Webinar</h3>
+              <p class="big-number"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#FFFFFF" style="margin-bottom: 10px; margin-right: 5px"><path d="M358-319q30.94 0 52.97-21.5Q433-362 433-393t-22.03-52.5Q388.94-467 358-467q-30.11 0-51.56 21.5Q285-424 285-393t21.44 52.5Q327.89-319 358-319Zm296.5-21.5Q676-362 676-393t-21.5-52.5Q633-467 602-467t-52.5 21.5Q528-424 528-393t21.5 52.5Q571-319 602-319t52.5-21.5ZM532.96-555.04q22.04-22.05 22.04-53Q555-639 532.97-660T480-681q-30.11 0-51.56 21.44Q407-638.11 407-608q0 30.94 21 52.97Q449-533 479.96-533q30.95 0 53-22.04ZM480.27-80q-82.74 0-155.5-31.5Q252-143 197.5-197.5t-86-127.34Q80-397.68 80-480.5t31.5-155.66Q143-709 197.5-763t127.34-85.5Q397.68-880 480.5-880t155.66 31.5Q709-817 763-763t85.5 127Q880-563 880-480.27q0 82.74-31.5 155.5Q817-252 763-197.68q-54 54.31-127 86Q563-80 480.27-80Zm.23-60Q622-140 721-239.5t99-241Q820-622 721.19-721T480-820q-141 0-240.5 98.81T140-480q0 141 99.5 240.5t241 99.5Zm-.5-340Z" /></svg>2</p>
+            </div>
+            <div class="flip-card-back">
+              <h5>Webinar Details</h5>
+              <p>• SYNTAX Endgame IT Congress<br>• Bridging Knowledge<br></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="w-100 py-4 reveal-scroll"
+    style="background-color: rgba(10, 11, 92, 0.6); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 2px solid #0dcaf098; border-bottom: 2px solid #0dcaf098;">
+    <div class="container text-center">
+      <div class="mb-2">
+        <h3 class="text-white fw-bold mb-0" style="text-shadow: 0 0 10px #0dcaf098; letter-spacing: 2px;">
+          ANGELO MARCELINO
+        </h3>
+        <p class="text-info small mb-0">Frontend Developer</p>
+      </div>
+      <hr class="mx-auto my-3" style="width: 50px; height: 4px; background-color: #0dcaf098; border: none; opacity: 1; box-shadow: 0 0 10px #0dcaf098; border-radius: 10px;">
+      <div class="text-white-50 small">2026 Created</div>
+    </div>
+  </footer>
+</section>
+
+  <section id="projects" class="unified-background d-flex flex-column pb-0">
+    <div class="position-absolute start-50 text-center text-white "
+      style="transform: translateX(-50%); margin-top: 40px;">
+      <h1 style="font-weight: bolder; font-size: 70px; text-shadow: 1px 7px 15px #0dcaf098;">Developer’s Canvas</h1>
+      <hr class="mx-auto" style="width: 100px; border-top: 3px solid #0dcaf098; 
+               opacity: 1; 
+               box-shadow: 0 0 15px #0dcaf098; 
+               margin-top: 0;">
+      <p style="font-size: 22px; text-shadow: 1px 5px 4px #00000098;">My palette of tools for crafting digital
+        experiences</p>
+    </div>
+    <div class="container mt-5 flex-grow-1 "
+      style="align-items: center; display: flex; justify-content: center; height: 100%;">
+      <div class="row justify-content-center g-5">
+        <div class="col-md-4">
+          <div class="card h-100"
+            style="background-color: #ffffff13; backdrop-filter: blur(50px); border: 2px solid #0dcaf098; box-shadow: #0a0b5c 25px 30px 20px;">
+            <div class="card-body text-white">
+
+              <h5 class="card-title text-center mb-4" style="width: 100%; display: block;">
+                <img src="Drawer/frontEnd.png" alt="" style="width: 25px; margin-right: 10px;"> FRONTEND
+              </h5>
+
+              <div class="container">
+                <div class="skill-box"
+                  style="margin-bottom: 15px; margin-top: 20px; border: 2px solid #0dcaf098; width: 30%; border-radius: 10px; padding: 5px;">
+                  <img src="Drawer/html.png" alt="html">
+                  <span>HTML</span>
+                </div>
+              </div>
+
+              <div class="container">
+                <div class="skill-box"
+                  style="margin-bottom: 15px; margin-top: 20px; border: 2px solid #0dcaf098; width: 30%; border-radius: 10px; padding: 5px;">
+                  <img src="Drawer/css.png" alt="html">
+                  <span>CSS</span>
+                </div>
+              </div>
+
+              <div class="container">
+                <div class="skill-box"
+                  style="margin-bottom: 15px; margin-top: 20px; border: 2px solid #0dcaf098; width: 50%; border-radius: 10px; padding: 5px">
+                  <img src="Drawer/bootstrap.png" alt="html">
+                  <span>BOOTSTRAP</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100"
+            style="background-color: #ffffff13; backdrop-filter: blur(50px); border: 2px solid #0dcaf098; box-shadow: #0a0b5c 25px 30px 20px">
+            <div class="card-body text-white">
+              <h5 class="card-title text-center"><img src="Drawer/mobile.png" alt=""> MOBILE DEVELOPMENT</h5>
+              <div class="container">
+                <div class="skill-box"
+                  style="margin-bottom: 15px; margin-top: 20px; border: 2px solid #0dcaf098; width: 60%; border-radius: 10px; padding: 5px;">
+                  <img src="Drawer/android.png" alt="html">
+                  <span>ANDROID STUDIO</span>
+                </div>
+              </div>
+              <div class="container">
+                <div class="skill-box"
+                  style="margin-bottom: 15px; margin-top: 20px; border: 2px solid #0dcaf098; width: 30%; border-radius: 10px; padding: 5px;">
+                  <img src="Drawer/java.png" alt="html">
+                  <span>JAVA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100"
+            style="background-color: #ffffff13; backdrop-filter: blur(50px); border: 2px solid #0dcaf098; box-shadow: #0a0b5c 25px 30px 20px">
+            <div class="card-body text-white">
+              <h5 class="card-title text-center"><img src="Drawer/Tools.png" alt=""> TOOLS</h5>
+              <div class="container">
+                <div class="skill-box"
+                  style="margin-bottom: 15px; margin-top: 20px; border: 2px solid #0dcaf098; width: 40%; border-radius: 10px; padding: 5px;">
+                  <img src="Drawer/figma.png" alt="html">
+                  <span>FIGMA</span>
+                </div>
+              </div>
+              <div class="container">
+                <div class="skill-box"
+                  style="margin-bottom: 15px; margin-top: 20px; border: 2px solid #0dcaf098; width: 40%; border-radius: 10px; padding: 5px;">
+                  <img src="Drawer/netbeans.png" alt="html">
+                  <span>NETBEANS</span>
+                </div>
+              </div>
+              <div class="container">
+                <div class="skill-box"
+                  style="margin-bottom: 15px; margin-top: 20px; border: 2px solid #0dcaf098; width: 30%; border-radius: 10px; padding: 5px;">
+                  <img src="Drawer/git.png" alt="html">
+                  <span>GIT</span>
+                </div>
+              </div>
+              <div class="container">
+                <div class="skill-box"
+                  style="margin-bottom: 15px; margin-top: 20px; border: 2px solid #0dcaf098; width: 70%; border-radius: 10px; padding: 5px;">
+                  <img src="Drawer/vscode.png" alt="html">
+                  <span>VISUAL STUDIO CODE</span>
+                </div>
+              </div>
+              <div class="container">
+                <div class="skill-box"
+                  style="margin-bottom: 15px; margin-top: 20px; border: 2px solid #0dcaf098; width: 70%; border-radius: 10px; padding: 5px;">
+                  <img src="Drawer/windows.png" alt="html">
+                  <span>MS OFFICE APPLICATION</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="w-100 py-1 mt-auto"
+      style="background-color: rgba(10, 11, 92, 0.055); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 2px solid #0dcaf098; border-bottom: 2px solid #0dcaf098;">
+      <div class="container text-center">
+        <div class="mb-1">
+          <h3 class="text-white fw-bold mb-0" style="text-shadow: 0 0 10px #0dcaf098; letter-spacing: 2px;">
+            ANGELO MARCELINO
+          </h3>
+          <p class="text-info small mb-0">Frontend Developer</p>
+        </div>
+        <hr class="mx-auto my-3"
+          style="width: 50px; height: 4px; background-color: #0dcaf098; border: none; opacity: 1; box-shadow: 0 0 10px #0dcaf098; border-radius: 10px;">
+        <div class="text-white-50 small">
+          2026 Created
+        </div>
+      </div>
+    </footer>
+  </section>
+  <section id="contact" class="unified-background d-flex flex-column min-vh-100 w-100">
+    <div style="flex: 1 0 auto; padding: 100px 20px 60px 20px;">
+      <div class="text-center text-white mb-2">
+        <h1 style="font-weight: bolder; font-size: 70px; text-shadow: 1px 7px 15px #0dcaf098;">
+          Projects
+        </h1>
+        <hr class="mx-auto"
+          style="width: 100px; border-top: 3px solid #0dcaf098; opacity: 1; box-shadow: 0 0 15px #0dcaf098; margin-top: 1;">
+        <p class="text-info mt-2 fs-4">Project that i design</p>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col-project">
+          <div class="card h-100"
+            style="background-color: #ffffff13; backdrop-filter: blur(50px); border: 2px solid #0dcaf098; box-shadow: #0a0b5c 25px 30px 20px;">
+            <img src="Drawer/cinemax.jpg" class="card-img-top" alt="CineMax"
+              style="border: 5px solid #f0c60d98; box-shadow: 0px 0px 100px #e3b126c5;">
+            <div class="card-body text-white">
+              <div class="card-footer">
+                <small
+                  style=" background-color: #0a0b5c46; padding: 5px; border-radius: 10px; border: 1px solid #0dcaf098;">2024</small>
+              </div>
+              <h5 class="card-title text-center"
+                style=" background-color: #212529; border: 1px solid #0dcaf0; padding: 5px;">CineMax - Movie Booking
+              </h5>
+              <p class="card-text-a"
+                style="background: #212529; border: 1px solid #0dcaf098; padding: 10px; border-radius: 10px; box-shadow: 0px 2px 5px black; margin-top: 10px;">
+                A Movie Booking System that allows users to pick movies, choose showtimes, and book
+                their preferred seats seamlessly. Designed with an intuitive interface, it ensures a smooth movie-ticket
+                booking experience from selection to confirmation.</p>
+              <div class="container d-flex justify-content-center">
+                <div class="skill-box "
+                  style="margin-bottom: 15px; margin-top: 5px; border: 2px solid #0dcaf098; width: 30%; border-radius: 10px; padding: 5px;">
+                  <img src="Drawer/java.png" alt="html">
+                  <span>JAVA</span>
+                  <a class="icon-link icon-link-hover"
+                    style="--bs-icon-link-transform: translate3d(0, -.125rem, 0); margin-right: 10px; margin-left: 10px;"
+                    href="https://github.com/Sherlock2-4/MealOrdering.git">
+                    <img src="Drawer/github.png" alt=""
+                      style="width: 40px; border: 2px solid #0dcaf098; border-radius: 50%; padding: 5px; box-shadow: 0 0 10px #0dcaf098;">
+                    Source Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100"
+            style="background-color: #ffffff13; backdrop-filter: blur(50px); border: 2px solid #0dcaf098; box-shadow: #0a0b5c 25px 30px 20px;">
+            <img src="Drawer/dxtreme.jpg" class="card-img-top" alt="dxtreme"
+              style="border: 5px solid #df350bc9; box-shadow: 5px 5px 100px #df350bc9;">
+            <div class="card-body text-white">
+              <div class="card-footer">
+                <small
+                  style=" background-color: #0a0b5c46; padding: 5px; border-radius: 10px; border: 1px solid #0dcaf098;">2025</small>
+              </div>
+              <h5 class="card-title text-center"
+                style=" background-color: #212529; border: 1px solid #0dcaf0; padding: 5px;">DXTeme - GYM Management
+                System</h5>
+              <p class="card-text-a"
+                style="background: #212529; border: 1px solid #0dcaf098; padding: 10px; border-radius: 10px; box-shadow: 0px 2px 5px black;  margin-top: 10px;">
+                A comprehensive Gym Management System designed to digitize fitness center operations.
+                This platform replaces traditional pen-and-paper methods with streamlined modules for automated
+                attendance
+                tracking and real-time equipment maintenance monitoring.</p>
+              <div class="container d-flex justify-content-center">
+                <div class="skill-box"
+                  style="margin-bottom: 15px; margin-top: 5px; border: 2px solid #0dcaf098; width: 30%; border-radius: 10px; padding: 5px;">
+                  <img src="Drawer/cc.png" alt="html">
+                  <span>C#</span>
+                  <a class="icon-link icon-link-hover"
+                    style="--bs-icon-link-transform: translate3d(0, -.125rem, 0); margin-right: 10px; margin-left: 10px;"
+                    href="https://github.com/Sherlock2-4/DXTreme.git">
+                    <img src="Drawer/github.png" alt=""
+                      style="width: 40px; border: 2px solid #0dcaf098; border-radius: 50%; padding: 5px; box-shadow: 0 0 10px #0dcaf098;">
+                    Source Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-white"
+            style="background-color: #ffffff13; backdrop-filter: blur(50px); border: 2px solid #0dcaf098; box-shadow: #0a0b5c 25px 30px 20px;">
+            <img src="Drawer/mealordering.png" class="card-img-top" alt="mealordring"
+              style="background-color: #e42b13; border: 5px solid #ffffffc9; box-shadow: 5px 5px 100px #ddd7d7c9;">
+            <div class="card-body">
+              <div class="card-footer">
+                <small
+                  style=" background-color: #0a0b5c46; padding: 5px; border-radius: 10px; border: 1px solid #0dcaf098;">2026</small>
+              </div>
+              <h5 class="card-title text-center"
+                style=" background-color: #212529; border: 1px solid #0dcaf0; padding: 5px;">Meal Ordering - Ordering
+                App</h5>
+              <p class="card-text-a"
+                style="background: #212529; border: 1px solid #0dcaf098; padding: 10px; border-radius: 10px; box-shadow: 0px 2px 5px black;  margin-top: 10px;">
+                Empower your small business with a digital-first ordering solution. Eliminate manual
+                errors and save time by managing every customer request through a single, easy-to-use digital interface.
+              </p>
+              <div class="container d-flex justify-content-center">
+                <div class="skill-box"
+                  style="margin-bottom: 15px; margin-top: 20px; border: 2px solid #0dcaf098; width: 30%; border-radius: 10px; padding: 5px;">
+                  <img src="Drawer/java.png" alt="html">
+                  <span>JAVA</span>
+                  <a class="icon-link icon-link-hover"
+                    style="--bs-icon-link-transform: translate3d(0, -.125rem, 0); margin-right: 10px; margin-left: 10px;"
+                    href="https://github.com/Sherlock2-4/MealOrdering.git">
+                    <img src="Drawer/github.png" alt=""
+                      style="width: 40px; border: 2px solid #0dcaf098; border-radius: 50%; padding: 5px; box-shadow: 0 0 10px #0dcaf098;">
+                    Source Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center text-white py-2"
+      style="background-color: #0a0b5c; border-top: 2px solid #0dcaf098; border-bottom: 2px solid #0dcaf098; box-shadow: 0px -5px 15px #0dcaf04d; flex-shrink: 0;">
+      <div class="container">
+        <div class="mb-3">
+          <a href="https://github.com/Sherlock2-4" class="text-white mx-2" style="text-decoration: none;">
+            <img src="Drawer/github.png" alt="GitHub" style="width: 30px; filter: drop-shadow(0 0 5px #0dcaf0);">
+          </a>
+        </div>
+        <p class="mb-1" style="font-size: 14px; opacity: 0.9;">
+          2024-2026 Designed by <span class="text-info fw-bold" style="text-shadow: 0 0 10px #0dcaf0;">Sherlock</span>
+        </p>
+        <small class="text-white ">Built with Java & C#</small>
+      </div>
+    </footer>
+  </section>
+
+  <section id="Upskill" class="d-flex flex-column min-vh-100" style="background-color: #0f172a; ">
+
+    <div class="container" style="margin-top: 0px; padding-top: 0px;">
+      <h2 class="mb-2 text-center text-white"
+        style="font-weight: bolder; font-size: 40px; text-shadow: 1px 7px 15px #0dcaf098;">Webinars</h2>
+      <hr class="mx-auto mt-0 mb-4"
+        style="width: 50px; height: 4px; background-color: #0dcaf098; border: none; opacity: 1; box-shadow: 0 0 100px #0dcaf098; border-radius: 10px; ">
+
+      <div id="carouselWebinars" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+              <div class="card shadow text-center"
+                style="width: 50rem; max-width: 90%; background-color: #212529; border: 1px solid #0dcaf0; ">
+                <div class="card-header bg-dark text-info border-info">APR 2024</div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item bg-transparent text-white fw-bold border-secondary">SYNTAX Endgame: Second
+                    IT Congress</li>
+                  <li class="list-group-item bg-transparent text-white-50 border-secondary">Gathering of major PH IT
+                    communities discussing leadership and excellence in the gaming industry.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary">
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                      <span>IT Leadership</span> <span class="text-info">|</span>
+                      <span>Web3</span> <span class="text-info">|</span>
+                      <span>The Syntax Org</span>
+                    </div>
+                  </li>
+                  <li class="list-group-item bg-transparent text-white-50 border-0"><svg
+                      xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+                      fill="#FFFFFF">
+                      <path
+                        d="M96-192v-92q0-25.78 12.5-47.39T143-366q54-32 114.5-49T384-432q66 0 126.5 17T625-366q22 13 34.5 34.61T672-284v92H96Zm648 0v-92q0-42-19.5-78T672-421q39 8 75.5 21.5T817-366q22 13 34.5 34.67Q864-309.65 864-284v92H744ZM282-522q-42-42-42-102t42-102q42-42 102-42t102 42q42 42 42 102t-42 102q-42 42-102 42t-102-42Zm396 0q-42 42-102 42-8 0-15-.5t-15-2.5q25-29 39.5-64.5T600-624q0-41-14.5-76.5T546-765q8-2 15-2.5t15-.5q60 0 102 42t42 102q0 60-42 102ZM168-264h432v-20q0-6.47-3.03-11.76-3.02-5.3-7.97-8.24-47-27-99-41.5T384-360q-54 0-106 14t-99 42q-4.95 2.83-7.98 7.91-3.02 5.09-3.02 12V-264Zm267-309.21q21-21.21 21-51T434.79-675q-21.21-21-51-21T333-674.79q-21 21.21-21 51T333.21-573q21.21 21 51 21T435-573.21ZM384-264Zm0-360Z" />
+                    </svg> + 400 Attendees</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <div class="card shadow text-center"
+                style="width: 50rem; max-width: 90%; background-color: #212529; border: 1px solid #0dcaf0;">
+                <div class="card-header bg-dark text-info border-info">DEC 2024</div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item bg-transparent text-white fw-bold border-secondary">Bridging Knowledge</li>
+                  <li class="list-group-item bg-transparent text-white-50 border-secondary">Exploring Digital Divide,
+                    Cybersecurity, OS Trends, and Professionalism.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary">
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                      <span>OS Trends</span> <span class="text-info">|</span>
+                      <span>Cybersecurity</span> <span class="text-info">|</span>
+                      <span>Programming</span> <span class="text-info">|</span>
+                      <span>Professionalism</span>
+                    </div>
+                  </li>
+                  <li class="list-group-item bg-transparent text-white-50 border-0"><svg
+                      xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+                      fill="#FFFFFF">
+                      <path
+                        d="M96-192v-92q0-25.78 12.5-47.39T143-366q54-32 114.5-49T384-432q66 0 126.5 17T625-366q22 13 34.5 34.61T672-284v92H96Zm648 0v-92q0-42-19.5-78T672-421q39 8 75.5 21.5T817-366q22 13 34.5 34.67Q864-309.65 864-284v92H744ZM282-522q-42-42-42-102t42-102q42-42 102-42t102 42q42 42 42 102t-42 102q-42 42-102 42t-102-42Zm396 0q-42 42-102 42-8 0-15-.5t-15-2.5q25-29 39.5-64.5T600-624q0-41-14.5-76.5T546-765q8-2 15-2.5t15-.5q60 0 102 42t42 102q0 60-42 102ZM168-264h432v-20q0-6.47-3.03-11.76-3.02-5.3-7.97-8.24-47-27-99-41.5T384-360q-54 0-106 14t-99 42q-4.95 2.83-7.98 7.91-3.02 5.09-3.02 12V-264Zm267-309.21q21-21.21 21-51T434.79-675q-21.21-21-51-21T333-674.79q-21 21.21-21 51T333.21-573q21.21 21 51 21T435-573.21ZM384-264Zm0-360Z" />
+                    </svg> ??? Attendees</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselWebinars" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"
+            style="width: 40px; height: 40px; filter: drop-shadow(0 0 5px #0dcaf0); border: 2px solid #0dcaf0;"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselWebinars" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"
+            style="width: 40px; height: 40px; filter: drop-shadow(0 0 5px #0dcaf0); border: 2px solid #0dcaf0;"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container-fluid mt-5 mb-auto pb-5">
+      <h2 class="mb-2 text-center text-white"
+        style="font-weight: bolder; font-size: 40px; text-shadow: 1px 7px 15px #0dcaf098;">Certificates</h2>
+      <hr class="mx-auto mt-0 mb-4"
+        style="width: 50px; height: 4px; background-color: #0dcaf098; border: none; opacity: 1; box-shadow: 0 0 10px #0dcaf098; border-radius: 10px;">
+
+      <div id="carouselExample" class="carousel slide border border-info rounded shadow overflow-hidden"
+        data-bs-ride="carousel" style="background-color: #212529;">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center align-items-center" style="height: 50vh;">
+              <img src="Drawer/java.jpg" class="d-block rounded shadow"
+                style="max-height: 100%; max-width: 100%; object-fit: contain; padding: 20px;" alt="Certificate 1">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center" style="height: 50vh;">
+              <img src="Drawer/skill.jpg" class="d-block rounded shadow"
+                style="max-height: 100%; max-width: 100%; object-fit: contain; padding: 20px;" alt="Certificate 2">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center" style="height: 50vh;">
+              <img src="Drawer/sap.jpg" class="d-block rounded shadow"
+                style="max-height: 100%; max-width: 100%; object-fit: contain; padding: 20px;" alt="Certificate 3">
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"
+            style="width: 40px; height: 40px; filter: drop-shadow(0 0 5px #0dcaf0); border: 2px solid #0dcaf0;"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"
+            style="width: 40px; height: 40px; filter: drop-shadow(0 0 5px #0dcaf0); border: 2px solid #0dcaf0;"></span>
+        </button>
+      </div>
+    </div>
+
+    <footer class="text-center text-white py-4"
+      style="background-color: #0a0b5c; border-top: 2px solid #0dcaf098; box-shadow: 0px -5px 15px #0dcaf04d; border-bottom: 2px solid #0dcaf098;">
+      <div class="container">      
+      <hr class="mx-auto my-3" style="width: 50px; 
+           height: 4px; 
+           background-color: #0dcaf098; 
+           border: none; 
+           opacity: 1; 
+           box-shadow: 0 0 10px #0dcaf098; 
+           border-radius: 10px;">
+      </div>
+    </footer>
+  </section>
+
+  <section id="HireMe" class="unified-background pt-5 pb-0 d-flex flex-column" style="min-height: 100vh;">
+    <div class="flex-grow-1">
+      <div class="text-center text-white mb-5">
+        <h1 class="display-2 fw-bolder" style="text-shadow: 1px 7px 15px #0dcaf098;">Hire Me</h1>
+        <hr class="mx-auto my-1"
+          style="width: 100px; border-top: 3px solid #0dcaf098; opacity: 1; box-shadow: 0 0 10px #0dcaf098;">
+        <p class="text-info mt-5 fs-4">Let's work together on your next project!</p>
+      </div>
+    </div>
+    <div class="container mb-5"
+      style="background-color: #0a0b5c; padding: 30px; border-radius: 30px; border: 2px solid #0dcaf098; box-shadow: 1px 10px 50px rgb(37, 107, 98);">
+      <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+        <button type="button" class="skill-box btn btn-primary position-relative d-flex align-items-center"
+          style="background-color: #0a0b5c; border-color: #0dcaf098; text-decoration: none; width: fit-content; transition: 0.3s;">
+          <img src="Drawer/emailhire.png" alt="" class="me-2" width="20">
+          <span class="text-truncate" style="max-width: 200px;">angelomarcelino24@gmail.com</span>
+          <span
+            class="position-absolute top-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle"></span>
+        </button>
+
+        <a href="https://www.linkedin.com/in/angelo-marcelino-9301313ba" target="_blank"
+          class="skill-box btn btn-primary position-relative d-flex align-items-center"
+          style="background-color: #0a0b5c; border-color: #0dcaf098; text-decoration: none; width: fit-content; transition: 0.3s;">
+
+          <img src="Drawer/linkhire.png" alt="LinkedIn" class="me-2" width="20">
+          LinkedIn
+
+          <span
+            class="position-absolute top-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle"
+            style="width: 10px; height: 10px; box-shadow: 0 0 5px #198754;">
+          </span>
+        </a>
+
+        <a href="https://www.facebook.com/marcelinoangelo824" target="_blank"
+          class="skill-box btn btn-primary position-relative d-flex align-items-center"
+          style="background-color: #0a0b5c; border-color: #0dcaf098; text-decoration: none; width: fit-content; transition: 0.3s;">
+          <img src="Drawer/facebookhire.png" alt="Facebook" class="me-2" width="20">
+          Facebook
+          <span
+            class="position-absolute top-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle"
+            style="width: 10px; height: 10px;">
+          </span>
+        </a>
+      </div>
+      <form class="row g-3">
+        <div class="col-md-6">
+          <label for="formName" class="form-label text-white">Name</label>
+          <input type="text" class="form-control" id="formName" placeholder="Your Name">
+        </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label text-white">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="your.Email@gmail.com">
+        </div>
+        <div class="col-12">
+          <label for="formSubject" class="form-label text-white">Subject</label>
+          <input type="text" class="form-control" id="formSubject" placeholder="What is this about?">
+        </div>
+        <div class="col-12">
+          <label for="exampleFormControlTextarea1" class="form-label text-white">Message</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+            placeholder="Your Message..."></textarea>
+        </div>
+        <div class="col-12 d-grid mt-4">
+          <button class="btn btn-info text-white fw-bold py-3" type="button"
+            style="background-color: #0a0b5c; border: 1px solid #0dcaf098;">
+            <img src="Drawer/send.png" alt="" class="me-2" width="20"> Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+    </div>
+    <footer class="w-100 py-4" style="background-color: #0a0b5c00; border-top: 2px solid #0dcaf098; ">
+      <div class="container text-center">
+        <div class="mb-2">
+          <h3 class="text-white fw-bold mb-0" style="text-shadow: 0 0 10px #0dcaf098; letter-spacing: 2px;">
+            ANGELO MARCELINO
+          </h3>
+          <p class="text-info small mb-0">Frontend Developer</p>
+        </div>
+        <hr class="mx-auto my-3" style="width: 50px; border-top: 2px solid #0dcaf098; opacity: 1;">
+        <div class="text-white-50 small">
+          2026 Created
+        </div>
+      </div>
+    </footer>
+  </section>
+
 </body>
+
 </html>
