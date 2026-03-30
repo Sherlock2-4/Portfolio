@@ -145,13 +145,15 @@ section {
         max-width: 500px; 
     }
 
-    /* Remove borders and background logic for active links on mobile */
-    .sidebar .nav-link.active,
-    .nav-link.active {
-        border: none !important;
-        background-color: transparent !important;
-        backdrop-filter: none !important;
-        padding-left: 0;
+   
+    .sidebar .nav-link.active {
+        border: none ;
+        border-radius: 0; 
+    }
+
+    .sidebar .nav-item a:hover {
+        border: none;
+        background-color: transparent;
     }
 
     .hide-on-mobile {
@@ -166,39 +168,37 @@ section {
         border: none !important;
     }
 #about {
-        padding: 60px 15px 0 15px; /* Reduced top padding, added side breathing room */
-        height: auto; /* Allows section to grow with content */
+        padding: 60px 15px 0 15px; 
+        height: auto; 
     }
 
     .wrapper {
-        flex-direction: column; /* Stacks Profile Image and Intro Card */
+        flex-direction: column;
         align-items: center;
         gap: 1.5rem;
     }
 
     .profile {
-        max-width: 280px; /* Smaller profile for mobile screens */
+        max-width: 280px;
         margin: 0 auto;
     }
 
     .intro {
-        flex: 1 1 auto; /* Allows the card to shrink/grow naturally */
+        flex: 1 1 auto; 
         width: 100%;
-        margin-left: 0 !important; /* Overrides any manual left margins */
+        margin-left: 0 !important; 
         padding: 15px;
     }
 
-    /* Fixes for the "Project" and "Webinar" grid */
     .cards {
-        grid-template-columns: 1fr; /* Stacks flip cards vertically */
+        grid-template-columns: 1fr; 
         width: 100%;
     }
 
     .flip-card {
-        height: 180px; /* Slightly shorter cards for better screen fit */
+        height: 180px;
     }
 
-    /* Resetting internal margins that cause off-center text on mobile */
     .title, 
     .card-title, 
     .card-text, 
@@ -208,7 +208,7 @@ section {
     }
 
     .logo {
-        justify-content: center; /* Centers social links */
+        justify-content: center;
         gap: 15px;
     }
 
