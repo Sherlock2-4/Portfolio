@@ -165,18 +165,57 @@ section {
     .nav, .nav-tabs {
         border: none !important;
     }
+#about {
+        padding: 60px 15px 0 15px; /* Reduced top padding, added side breathing room */
+        height: auto; /* Allows section to grow with content */
+    }
 
     .wrapper {
-        flex-direction: column;
+        flex-direction: column; /* Stacks Profile Image and Intro Card */
+        align-items: center;
         gap: 1.5rem;
     }
 
+    .profile {
+        max-width: 280px; /* Smaller profile for mobile screens */
+        margin: 0 auto;
+    }
+
     .intro {
+        flex: 1 1 auto; /* Allows the card to shrink/grow naturally */
+        width: 100%;
+        margin-left: 0 !important; /* Overrides any manual left margins */
+        padding: 15px;
+    }
+
+    /* Fixes for the "Project" and "Webinar" grid */
+    .cards {
+        grid-template-columns: 1fr; /* Stacks flip cards vertically */
         width: 100%;
     }
 
     .flip-card {
-        height: 180px;
+        height: 180px; /* Slightly shorter cards for better screen fit */
+    }
+
+    /* Resetting internal margins that cause off-center text on mobile */
+    .title, 
+    .card-title, 
+    .card-text, 
+    .logo a {
+        margin-left: 0 !important;
+        text-align: center;
+    }
+
+    .logo {
+        justify-content: center; /* Centers social links */
+        gap: 15px;
+    }
+
+    .logo a {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
     }
 }
 
