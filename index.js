@@ -2,7 +2,7 @@ function showSidebar() {
   const sidebar = document.querySelector('.sidebar');
   if (sidebar) {
     sidebar.style.setProperty('display', 'flex', 'important');
-    document.body.style.overflow = 'hidden'; // Prevents background scrolling
+    document.body.style.overflow = 'hidden';
   }
 }
 
@@ -10,7 +10,7 @@ function hideSidebar() {
   const sidebar = document.querySelector('.sidebar');
   if (sidebar) {
     sidebar.style.setProperty('display', 'none', 'important');
-    document.body.style.overflow = 'auto'; // Re-enables scrolling
+    document.body.style.overflow = 'auto';
   }
 }
 
@@ -19,6 +19,8 @@ document.querySelectorAll('.sidebar .nav-item a').forEach(link => {
     hideSidebar();
   });
 });
+
+
 
 function changeImage() {
   const img = document.getElementById('profileImage');
