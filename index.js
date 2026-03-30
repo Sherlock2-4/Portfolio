@@ -2,7 +2,7 @@ function showSidebar() {
   const sidebar = document.querySelector('.sidebar');
   if (sidebar) {
     sidebar.style.setProperty('display', 'flex', 'important');
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden'; // Prevents background scrolling
   }
 }
 
@@ -10,13 +10,14 @@ function hideSidebar() {
   const sidebar = document.querySelector('.sidebar');
   if (sidebar) {
     sidebar.style.setProperty('display', 'none', 'important');
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = 'auto'; // Re-enables scrolling
   }
 }
 
-
 document.querySelectorAll('.sidebar .nav-item a').forEach(link => {
-  link.addEventListener('click', hideSidebar);
+  link.addEventListener('click', () => {
+    hideSidebar();
+  });
 });
 
 function changeImage() {

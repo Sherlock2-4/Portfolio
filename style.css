@@ -70,16 +70,6 @@ body {
     }
 }
 
-.nav {
-    border: 3px solid hsla(0, 0%, 100%, 0.137);
-    background: hwb(227 1% 74% / 0);
-    backdrop-filter: blur(10px);
-    box-shadow: 5px 5px 50px #0dcaf098;
-    border-radius: 50px 10px;
-    padding: 5px 15px;
-}
-
-
 header {
     position: fixed;
     top: 0;
@@ -140,20 +130,60 @@ section {
     fill: #0dcaf0;
 }
 
+.nav {
+    border: 3px solid hsla(0, 0%, 100%, 0.137);
+    background: rgba(4, 12, 34, 0.5); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 5px 25px rgba(13, 202, 240, 0.4);
+    border-radius: 50px 10px;
+    padding: 5px 15px;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-item a {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.nav-link.active {
+    color: #0dcaf098 ;
+    font-weight: bolder;
+}
+
+.nav-item a:hover {
+    color: #0dcaf098;
+}
+
 @media (max-width: 900px) {
     .sidebar {
         max-width: 500px; 
-    }
-
-   
-    .sidebar .nav-link.active {
         border: none ;
-        border-radius: 0; 
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    }
+    .nav, .nav-tabs {
+        border: none ;
+        background: transparent;
+        backdrop-filter: none ;
+        -webkit-backdrop-filter: none ;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0 ; 
     }
 
+    .sidebar .nav-item a,
+    .sidebar .nav-link.active, 
     .sidebar .nav-item a:hover {
-        border: none;
-        background-color: transparent;
+        border: none ;         
+        background-color: transparent; 
+        border-radius: 0 ;      
+        padding: 10px 0;
+        box-shadow: none ;
     }
 
     .hide-on-mobile {
@@ -164,10 +194,8 @@ section {
         display: block;
     }
 
-    .nav, .nav-tabs {
-        border: none !important;
-    }
-#about {
+    /* Profile/About Section */
+    #about {
         padding: 60px 15px 0 15px; 
         height: auto; 
     }
@@ -188,6 +216,7 @@ section {
         width: 100%;
         margin-left: 0 !important; 
         padding: 15px;
+        text-align: center;
     }
 
     .cards {
@@ -199,10 +228,7 @@ section {
         height: 180px;
     }
 
-    .title, 
-    .card-title, 
-    .card-text, 
-    .logo a {
+    .title, .card-title, .card-text, .logo a {
         margin-left: 0 !important;
         text-align: center;
     }
@@ -217,33 +243,6 @@ section {
         align-items: center;
         font-size: 14px;
     }
-}
-
-.nav-link.active {
-    color: #0dcaf098 !important;
-    background-color: rgba(247, 245, 245, 0.1);
-    backdrop-filter: blur(5px);
-    padding: 5px 15px;
-    border: 3px solid #0dcaf098;
-    border-radius: 5px 50px;
-}
-
-.nav-item a {
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.nav-item a:hover {
-    color: #0dcaf098;
-    background-color: rgba(247, 245, 245, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid #0dcaf098;
-    border-radius: 5px 50px;
-}
-
-.nav-tabs {
-    border-bottom: none;
 }
 
 #home {
@@ -293,6 +292,28 @@ section {
     letter-spacing: 2px;
 }
 
+.typing-text {
+  display: inline-block;
+  vertical-align: bottom; 
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #0dcaf0; 
+  
+  animation: 
+    typing 3s steps(9) infinite alternate,
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  70%, 100% { width: 10.5ch; } 
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #0dcaf0; }
+}
+
 #home p {
     font-size: clamp(1.15rem, 9vw, 1.2rem);
     max-width: 700px;
@@ -303,6 +324,7 @@ section {
     line-height: 1.5;
     margin-bottom: 2rem;
 }
+
 
 #home .buttons {
     display: flex;
@@ -356,7 +378,7 @@ section {
 #helloDisplay {
     transition: all 0.3s ease;
     display: inline-block;
-    min-width: 100px; /* Prevents text jumping when words change length */
+    min-width: 30px; 
 }
 .title svg {
     animation: spin-infinite 4s linear infinite;
@@ -416,7 +438,7 @@ section {
     display: flex;
     border-radius: 10px;
     border: 3px solid #0dcaf0;
-     box-shadow: 1px 30px 50px rgb(37, 107, 98);
+     box-shadow: 1px 5px 20px rgb(37, 107, 98);
 
     animation: bounceProfile 4s ease-in-out infinite;
 }
@@ -424,12 +446,12 @@ section {
 .intro {
     flex: 1 1 400px;
     max-width: 100%;
-    background: #ffffff17;
+    background: #0000004d;
     backdrop-filter: blur(20px);
     border-radius: 15px;
     border: 2px solid #0dcaf098;
     padding: 20px;
-     box-shadow: 1px 30px 90px rgb(37, 107, 98);
+     box-shadow: 5px 10px 100px rgb(37, 107, 98);
 }
 
 .title {
@@ -466,15 +488,14 @@ section {
 }
 
 .profile {
-    cursor: pointer; /* Shows the hand icon */
+    cursor: pointer;
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .profile:hover {
-    filter: brightness(1.1); /* Makes it light up slightly */
+    filter: brightness(1.1); 
 }
 
-/* Optional: Add a quick spin or pop when clicked */
 .profile:active {
     transform: scale(0.9); 
 }
