@@ -111,8 +111,8 @@ section {
     right: 0;
     height: 100vh;
     max-width: 100vh;
-    background-color: hwb(228 1% 74%);
-    backdrop-filter: blur(10px);
+    background-color: hwb(230 1% 74% / 0.973);
+    backdrop-filter: blur(100px);
     z-index: 10000;
     display: none;
     flex-direction: column;
@@ -121,8 +121,11 @@ section {
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
 }
 
+
+
 .sidebar .nav-item {
     margin: 15px 0;
+    border-bottom: 2px solid #0dcaf098;
 }
 
 .sidebar .nav-item a {
@@ -223,6 +226,7 @@ section {
     .sidebar {
         max-width: 500px; 
         border: none ;
+        backdrop-filter: blur(10px);
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
     }
     .nav, .nav-tabs {
@@ -716,10 +720,8 @@ section {
     background-size: 200% 300%;
     animation: moveAround 15s ease-in-out infinite;
     min-height: 100vh;
-    /* IMPORTANT: Changed from block to flex */
     display: flex; 
     flex-direction: column;
-    /* Removed padding from here; moved it to the HTML wrapper div for better fit */
     padding: 0; 
 }
 
