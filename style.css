@@ -275,46 +275,85 @@ section {
         display: block;
     }
 
-    /* Profile/About Section */
-    #about {
-        padding: 60px 15px 0 15px;
+   #about {
+        padding: 80px 15px 40px 15px; 
         height: auto;
+        min-height: auto; 
     }
 
     .wrapper {
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
     .profile {
-        max-width: 280px;
+        max-width: 220px; 
         margin: 0 auto;
+        animation: bounceProfile 4s ease-in-out infinite;
     }
 
+    /* Intro Box Reset */
     .intro {
-        flex: 1 1 auto;
         width: 100%;
         margin-left: 0 !important;
-        padding: 15px;
+        padding: 20px 15px;
+        text-align: center; 
+    }
+
+    .title, 
+    .card-title, 
+    .card-text {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
         text-align: center;
     }
 
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        justify-content: center; 
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .logo a {
+        margin-left: 0 !important; 
+        font-size: 13px;
+    }
+
+    /* Project/Webinar Cards */
     .cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
         width: 100%;
+        max-width: 320px;
+        margin: 20px auto 0 auto;
     }
 
     .flip-card {
-        height: 180px;
+        height: 160px; 
     }
 
-    .title,
-    .card-title,
-    .card-text,
-    .logo a {
-        margin-left: 0 !important;
-        text-align: center;
+    footer {
+        width: 100% !important;
+        margin-top: 50px;
+    }
+
+    .profile {
+        animation: none !important;
+        transform: none !important;
+    }
+
+    #projects .card {
+        animation: none !important;
+        transform: none !important;
+    }
+
+    #projects, #about {
+        animation: none !important;
+        background-size: cover !important;
     }
 
     .logo {
@@ -327,6 +366,8 @@ section {
         align-items: center;
         font-size: 14px;
     }
+
+    
 }
 
 #home {
